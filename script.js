@@ -17,3 +17,16 @@ function imprimirVariables() {
     console.error("Error: BLA BLA BLA");
     console.warn("Advertencia: x x x");
 }
+function imprimirArreglos(){
+    let frutas = ['Manzana', 'Pera', 'Banana'];
+    //BUCLE
+    for(let f of frutas){
+        console.log(f)
+    }
+    //CONDICIONALES
+    if(frutas[1] ==='pera'){
+        console.log("La segunda fruta es una pera");
+    } else{
+        console.log('NO es una PERA');
+    }
+}
