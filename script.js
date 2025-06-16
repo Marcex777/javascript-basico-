@@ -17,22 +17,52 @@ function imprimirVariables() {
     console.error("Error: BLA BLA BLA");
     console.warn("Advertencia: x x x");
 }
-function imprimirArreglos(){
+
+function arreglos() {
     let frutas = ['Manzana', 'Pera', 'Banana'];
-    //BUCLE
-    for(let f of frutas){
-        console.log(f)
+    // Bucle
+    for (let f of frutas) {
+        console.log(f);
     }
-    //CONDICIONALES
-    if(frutas[1] ==='pera'){
+
+    // Condicionales
+    if (frutas[1] === 'Pera') {
         console.log("La segunda fruta es una pera");
-    } else{
+    } else {
         console.log('NO es una PERA');
     }
 }
-// Función para saludar
+
+// Agregar evento a un elemento HTML
 document.getElementById("btnSaludar").addEventListener(
-    "click", function() {
-        console.log("¡Hola!");
+    "click", function () {
+        console.log("Hola");
     }
 );
+
+// Modificar al HTML a través del DOM
+document.getElementById("btnAgregar").addEventListener(
+    "click", () => {
+        // Obtener el elemento "lista" (ul) del documento HTML
+        let lista = document.getElementById("lista");
+        // Creando un nuevo elemento HTML, li = list item
+        let nuevoItem = document.createElement("li");
+        // Obteniendo el total de items de la lista
+        let totalItems = lista.childElementCount;
+        // Agregando un contenido (texto) al item
+        nuevoItem.textContent = `Item ${totalItems + 1}`; // Usando backticks correctamente
+        // Agregando item a la lista
+        lista.appendChild(nuevoItem);
+    }
+);
+
+// Función para agregar palabra a la lista
+function addPalabraLista() {
+    let lista = document.getElementById("lista");
+    let nuevaPalabra = prompt("Introduce una palabra:");
+    if (nuevaPalabra) {
+        let nuevoItem = document.createElement("li");
+        nuevoItem.textContent = nuevaPalabra;
+        lista.appendChild(nuevoItem);
+    }
+}
