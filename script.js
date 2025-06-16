@@ -30,3 +30,9 @@ function imprimirArreglos(){
         console.log('NO es una PERA');
     }
 }
+// Función para saludar
+document.getElementById("btnSaludar").addEventListener(
+    "click", function() {
+        console.log("¡Hola!");
+    }
+);
